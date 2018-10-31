@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Dimensions} from "react-native";
-import { DrawerNavigator, StackNavigator } from "react-navigation";
+import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import Main from "../Main";
 import SearchScreen from "../SearchScreen";
 import Details from "../Details";
@@ -22,7 +22,7 @@ import {SIGN_UP} from "../../const/Const";
 
 const {height, width} = Dimensions.get("window");
 
-const ThuocStack = StackNavigator(
+const ThuocStack = createStackNavigator(
   {
     MainScreen: {
       //screen: (props) => < Main {...props}  />
@@ -61,7 +61,7 @@ const ThuocStack = StackNavigator(
   }
 );
 
-const TPCNStack = StackNavigator(
+const TPCNStack = createStackNavigator(
   {
     MainScreen: {
       //screen: (props) => < Main {...props}  />
@@ -100,7 +100,7 @@ const TPCNStack = StackNavigator(
   }
 );
 
-const VTYTStack = StackNavigator(
+const VTYTStack = createStackNavigator(
   {
     MainScreen: {
       screen: (props) => <Main  {...props} screenProps={2}/>,
@@ -138,7 +138,7 @@ const VTYTStack = StackNavigator(
   }
 );
 
-const MyPhamStack = StackNavigator(
+const MyPhamStack = createStackNavigator(
   {
     MainScreen: {
       screen: (props) => <Main  {...props} screenProps={3}/>,
@@ -176,7 +176,7 @@ const MyPhamStack = StackNavigator(
   }
 );
 
-const CompanyStack = StackNavigator(
+const CompanyStack = createStackNavigator(
   {
     ListScreen: {
       screen: ListCompany
@@ -196,7 +196,7 @@ const CompanyStack = StackNavigator(
   }
 );
 
-const CompanyProfileStack = StackNavigator(
+const CompanyProfileStack = createStackNavigator(
   {
     CompanyProfile: {
       screen: CompanyProfile
@@ -216,14 +216,14 @@ const CompanyProfileStack = StackNavigator(
   }
 );
 
-const AddNewStack = StackNavigator(
+const AddNewStack = createStackNavigator(
   {
     AddThuoc: {
       screen: AddThuoc
     },
   }
 )
-const SignUpStack =  StackNavigator({
+const SignUpStack =  createStackNavigator({
   SignUpScreen :{
     screen : (props) => <SignUp {...props} Goto="ThuocStack"/>,
     navigationOptions :  ({ navigation }) => ({
@@ -237,7 +237,7 @@ const SignUpStack =  StackNavigator({
   initialRouteName: "SignUpScreen"
 })
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
     ThuocStack: {
       screen: ThuocStack
@@ -271,7 +271,7 @@ const Drawer = DrawerNavigator(
   }
 );
 
-export default (MainStack = StackNavigator(
+export default (MainStack = createStackNavigator(
   {
     SearchStack: {
       screen: SearchScreen

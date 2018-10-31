@@ -124,7 +124,7 @@ class MainHeader extends Component {
           <View style={wrapMenu}>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("DrawerOpen");
+                this.props.navigation.openDrawer();
               }}
               onPressOut={Keyboard.dismiss}
             >

@@ -42,6 +42,8 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("ThuocStack");
+                this.props.navigation.closeDrawer();
+               
               }}
             >
               <Left>
@@ -60,6 +62,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("TPCNStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -78,6 +81,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("VTYTStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -96,6 +100,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("MyPhamStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -117,6 +122,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("CompanyStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -135,6 +141,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("CompanyProfileStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -181,6 +188,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("ThuocStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -199,6 +207,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("TPCNStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -217,6 +226,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("VTYTStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -235,6 +245,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("MyPhamStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -256,6 +267,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("CompanyStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -274,6 +286,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("SignInStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
@@ -292,6 +305,7 @@ class SideMenu extends Component {
               style={{ flexDirection: "row" }}
               onPress={() => {
                 navigation.navigate("SignUpStack");
+                this.props.navigation.closeDrawer();
               }}
             >
               <Left>
