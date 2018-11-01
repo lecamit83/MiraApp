@@ -26,7 +26,8 @@ import {
   SO_DIEN_THOAI,
   PASSWORD,
   SIGN_IN,
-  BACKGROUND_COLOR_HEADER
+  BACKGROUND_COLOR_HEADER,
+  MA_SO_THUE
 } from "../const/Const";
 import { postData } from "../redux/actions/actionCreators";
 import { Loading } from "./common/Loading";
@@ -53,13 +54,10 @@ class SignIn extends Component {
             resizeMode="contain"
             opacity={0.2}
           >
-            <View>
-              <Text style={styles.textWelcome}>Welcome to MiraShop</Text>
-            </View>
             <Form style={styles.wrapForm}>
               <View style={styles.wrapInput}>
                 <Item floatingLabel>
-                  <Label>{SO_DIEN_THOAI}</Label>
+                  <Label>{MA_SO_THUE}</Label>
                   <Input
                     onChangeText={username => this.setState({ username })}
                     numberOfLines={1}
@@ -115,7 +113,7 @@ const { height, width } = Dimensions.get("window");
 const styles = StyleSheet.create({
   backgroundImage: {
     backgroundColor: "#aed581",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
     flex: 1
   },
@@ -133,14 +131,12 @@ const styles = StyleSheet.create({
     width: "96%",
     backgroundColor: "#c5e1a5",
     borderRadius: 4,
-    position: "absolute",
-    bottom: 0,
     margin: "2%",
     marginBottom: 4
   },
   wrapInput: {
     backgroundColor: "#dcedc8",
-    padding: 4,
+    paddingTop: 8,
     borderRadius: 4,
     margin: 4
   },

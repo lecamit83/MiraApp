@@ -113,7 +113,7 @@ class ProductItem extends Component {
   };
 
   openFBprofile = id => {
-    Linking.canOpenURL("fb://profile/" + "sdsadsa")
+    Linking.canOpenURL("fb://profile/" + id)
       .then(support => {
         if (support) {
           Linking.openURL("fb://profile/" + id);

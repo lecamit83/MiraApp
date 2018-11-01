@@ -18,6 +18,7 @@ import {
   BACKGROUND_COLOR
 } from "../../const/Const";
 
+import {StackActions, NavigationActions} from "react-navigation";
 // create a component
 class CompanyHeader extends Component {
   constructor(props) {
@@ -43,8 +44,19 @@ class CompanyHeader extends Component {
           <TouchableOpacity 
           onPressOut={Keyboard.dismiss}
           onPress={() => {
-            if(Goto !== undefined) navigation.navigate(Goto);
-            else navigation.goBack();
+            if(Goto !== undefined) {
+              // this.props.navigation.navigate(Goto);
+                const navigateAction = StackActions.reset({
+                  index: 0,
+                  key: null,
+                  actions: [NavigationActions.navigate({ routeName: Goto })]
+                })
+                this.props.navigation.dispatch(navigateAction)
+                console.log(Goto);  
+              }
+            else {
+              navigation.goBack();
+            }
           }}>
             <Image source={require("../../images/back.png")} style={iconBack} />
           </TouchableOpacity>
@@ -54,7 +66,7 @@ class CompanyHeader extends Component {
             {this.state.title}
           </Text>
         </View>
-        <View>
+        <View style={iconBack}>
           
         </View>
       </View>
@@ -69,7 +81,7 @@ const styles = StyleSheet.create({
   container: {
     height: HEADER_HEIGHT,
     backgroundColor: BACKGROUND_COLOR_HEADER,
-    justifyContent: "space-between",
+    justifyContent : "space-between",
     flexDirection: "row",
     alignItems: "center"
   },

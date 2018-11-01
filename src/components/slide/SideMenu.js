@@ -12,7 +12,7 @@ import {
   Icon,
   Left,
   Body,
-  Right
+  Right, Toast
 } from "native-base";
 import * as CONST from "../../const/Const";
 import { connect } from "react-redux";
@@ -43,7 +43,6 @@ class SideMenu extends Component {
               onPress={() => {
                 navigation.navigate("ThuocStack");
                 this.props.navigation.closeDrawer();
-               
               }}
             >
               <Left>
@@ -161,6 +160,13 @@ class SideMenu extends Component {
               onPress={() => {
                 this.deleleJWT();
                 this.props.dispatch(postSignOut());
+                this.props.navigation.closeDrawer();
+                Toast.show({
+                  text: "Đăng xuất thành công!",
+                  buttonText: "Okay",
+                  buttonTextStyle: { color: "#008000" },
+                  buttonStyle: { backgroundColor: "#5cb85c" }
+                });
               }}
             >
               <Left>

@@ -225,9 +225,9 @@ const AddNewStack = createStackNavigator(
 )
 const SignUpStack =  createStackNavigator({
   SignUpScreen :{
-    screen : (props) => <SignUp {...props} Goto="ThuocStack"/>,
+    screen : (props) => <SignUp {...props} Goto="MainStack"/>,
     navigationOptions :  ({ navigation }) => ({
-      header: (props) => <BackHeader {...props} navigation={navigation} title={SIGN_UP} Goto="ThuocStack"/>
+      header: (props) => <BackHeader {...props} navigation={navigation} title={SIGN_UP} Goto="MainStack"/>
     })
   },
   CheckIn : {
